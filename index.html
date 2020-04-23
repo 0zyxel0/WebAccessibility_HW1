@@ -9,6 +9,9 @@
     <link href="./css/bootstrap.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
+
+
+
 </head>
 
 <body class="d-flex flex-column bg-light">
@@ -26,14 +29,15 @@
                 <div class="col-4">
                     <div class="btn-toolbar justify-content-end">
                         <div class="btn-group btn-group-sm">
-                            <button class="btn btn-dark font-increase-button" id="font-increase-button">A+</button>
-                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
+                            <button onclick="fn_increaseFont();" class="btn btn-dark font-increase-button" id="font-increase-button" >A+</button>
+                            <button onclick="fn_decreaseFont();" class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="container-fluid bg-dark nav">
         <div class="container">
@@ -236,6 +240,8 @@
     <script type="text/javascript" src="./js/bootstrap.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/accessibilityFunctions.js"></script>
+
 </body>
 
 </html>
