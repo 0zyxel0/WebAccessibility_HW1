@@ -10,20 +10,25 @@ html {
 body a,
 body div,
 body p {
-    color: #dfdfdf
+    /*color: #dfdfdf*/
+    color: black;
 }
 
+
 body a:hover {
-    color: #cdcdcd
+    /*color: #cdcdcd*/
+    color: black;
 }
 
 .title {
     font-size: 2rem;
-    font-weight: 100
+    font-weight: 100;
+    color:black;
 }
 
 .subtitle {
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    color:black;
 }
 
 .header .logo {
