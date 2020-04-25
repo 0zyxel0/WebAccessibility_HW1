@@ -3625,7 +3625,8 @@ tbody.collapse.show {
 
 .nav-link:focus,
 .nav-link:hover {
-    text-decoration: none
+    text-decoration: none;
+    border: white solid 1px;
 }
 
 .nav-link.disabled {
@@ -4069,7 +4070,8 @@ tbody.collapse.show {
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: hsla(0, 0%, 100%, .75)
+    color: hsla(0, 0%, 100%, .75);
+    border: white solid 1px;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
