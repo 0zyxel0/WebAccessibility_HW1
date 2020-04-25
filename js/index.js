@@ -20,11 +20,11 @@ $(document).keyup(function(e) {
 $('.dropdown-menu a').keydown(function(e){
     switch(e.which){
         case 36: // home
-            e.preventDefault();
+
             $(this).closest('.dropdown-menu').find('a:first').focus();
             break;
         case 35: // end
-            e.preventDefault();
+
             $(this).closest('.dropdown-menu').find('a:last').focus();
             break;
     }

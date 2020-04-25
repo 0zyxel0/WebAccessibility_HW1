@@ -10,17 +10,10 @@
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
 
-    <style>
-
-        /*.studies p{color:black;}*/
-        /*.studies p a{color:black;}*/
-        /*.media-body{color:black;}*/
-    </style>
-
 </head>
 
 <body class="d-flex flex-column bg-light">
-    <div class="container-fluid d-none d-lg-block my-4 header">
+    <header class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
@@ -41,7 +34,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
 
     <div class="container-fluid bg-dark nav">
@@ -50,50 +43,47 @@
                 <div class="navbar-brand d-lg-none">
                     <img class="rounded-right" src="./img/logo.jpg" width="40" height="40">
                 </div>
-                <button class="navbar-toggler" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="nav-bar-content">
+                <nav class="collapse navbar-collapse" id="nav-bar-content" aria-labelledby="mainmenu">
                     <div class="navbar-nav mr-auto">
                         <div class="nav-item">
                             <a class="nav-link" href="./">Homepage</a>
                         </div>
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a>
-                            <div class="dropdown-menu">
-                                <div>
+                            <ul class="dropdown-menu">
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a>
-                            <div class="dropdown-menu">
-                                <div>
+                            <ul class="dropdown-menu">
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
-                                </div>
-                                <div>
+                                </li>
+                                <li>
                                     <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a>
@@ -115,16 +105,18 @@
                             <a class="nav-link" href="./login.html">Login</a>
                         </div>
                     </div>
-                </div>
+                </nav>
             </div>
-            <div class="d-lg-none">
-                <div class="btn-toolbar justify-content-end">
-                    <div class="btn-group btn-group-sm">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
-                    </div>
-                </div>
-            </div>
+            <!--[Calvin]-->
+            <!--Commented Code Block as it seems to be a UI duplicate aside from being light version and dark version-->
+            <!--<div class="d-lg-none">-->
+                <!--<div class="btn-toolbar justify-content-end">-->
+                    <!--<div class="btn-group btn-group-sm">-->
+                        <!--<button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>-->
+                        <!--<button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 
