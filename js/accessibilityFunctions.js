@@ -15,3 +15,5 @@ function fn_decreaseFont(){
     console.log(fontSize);
     $("html").css("fontSize", fontSize );
 }
+
+
