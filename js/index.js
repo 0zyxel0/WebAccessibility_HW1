@@ -1,31 +1,32 @@
 
 //Function to close the sub nav menu with ESC key press
-$(document).keyup(function(e) {
-    if (e.keyCode == 27) { // escape key maps to keycode `27`
+$(document).keydown(function(e) {
+    if (e.keyCode == 27 ) { // escape key maps to keycode `27`
         console.log('ESC Key Pressed.');
         if ($(".dropdown-menu").hasClass("show")) {
             $(".dropdown-menu").removeClass("show");
         }
     }
 });
+$(document).keydown(function(e) {
+    if (e.keyCode == 32) {
+        event.stopPropagation();
+        event.preventDefault();
 
+        var currentDropDownButton = event.target;
+        var currentDropDownMenu =
+            currentDropDownButton.parentNode.querySelector('.dropdown-menu');
+        var isOpen = currentDropDownMenu.classList.contains('show');
+        var dropDownMenus =
+            document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
+        for (var j = 0; j < dropDownMenus.length; j++) {
+            dropDownMenus[j].classList.remove('show');
+        }
 
-    $('.dropdown-toggle').focus( function () {
-        $(this).siblings('.dropdown-menu').addClass('show');
-    }).blur(function(){
-        $(this).siblings('.dropdown-menu').removeClass('show');
-    });
-
-
-$('.dropdown-menu a').keydown(function(e){
-    switch(e.which){
-        case 36: // home
-
-            $(this).closest('.dropdown-menu').find('a:first').focus();
-            break;
-        case 35: // end
-
-            $(this).closest('.dropdown-menu').find('a:last').focus();
-            break;
+        if (!isOpen) {
+            currentDropDownMenu.classList.add('show');
+        }
+        console.log('Space Key Pressed');
+        return false;
     }
 });
