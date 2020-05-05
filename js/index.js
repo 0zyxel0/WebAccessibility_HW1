@@ -1,18 +1,19 @@
 
-//Function to close the sub nav menu with ESC key press
-$(document).keydown(function(e) {
-    if (e.keyCode == 27 ) { // escape key maps to keycode `27`
-        console.log('ESC Key Pressed.');
-        if ($(".dropdown-menu").hasClass("show")) {
-            $(".dropdown-menu").removeClass("show");
-        }
-    }
-});
-$(document).keydown(function(e) {
-    if (e.keyCode == 32) {
-        event.stopPropagation();
-        event.preventDefault();
+function gotoParentElement(){
+    var currentDropDownButton = event.target;
+    var currentDropDownMenu =
+        currentDropDownButton.parentNode.querySelector('li');
+    currentDropDownMenu.focus();
 
+}
+
+
+$(document).keydown(function(e) {
+if (e.keyCode == 27 ) { // escape key maps to keycode `27`
+    event.stopPropagation();
+    event.preventDefault();
+
+    try{
         var currentDropDownButton = event.target;
         var currentDropDownMenu =
             currentDropDownButton.parentNode.querySelector('.dropdown-menu');
@@ -22,11 +23,37 @@ $(document).keydown(function(e) {
         for (var j = 0; j < dropDownMenus.length; j++) {
             dropDownMenus[j].classList.remove('show');
         }
-
-        if (!isOpen) {
-            currentDropDownMenu.classList.add('show');
-        }
-        console.log('Space Key Pressed');
+        gotoParentElement();
         return false;
+    }catch (e) {
+        return e;
+    }
+}
+});
+
+$(document).keydown(function(e) {
+    if (e.keyCode == 32) {
+        event.stopPropagation();
+        event.preventDefault();
+
+        try{
+            var currentDropDownButton = event.target;
+            var currentDropDownMenu =
+                currentDropDownButton.parentNode.querySelector('.dropdown-menu');
+            var isOpen = currentDropDownMenu.classList.contains('show');
+            var dropDownMenus =
+                document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
+            for (var j = 0; j < dropDownMenus.length; j++) {
+                dropDownMenus[j].classList.remove('show');
+            }
+
+            if (!isOpen) {
+                currentDropDownMenu.classList.add('show');
+            }
+            console.log('Space Key Pressed');
+            return false;
+        }catch (e) {
+            return e;
+        }
     }
 });
