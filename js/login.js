@@ -178,3 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .getElementById('register-register-button')
         .addEventListener('click', register, false);
 }, false);
+
+
+
