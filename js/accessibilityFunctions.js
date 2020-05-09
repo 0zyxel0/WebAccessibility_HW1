@@ -20,13 +20,14 @@ $(document).keydown(function(e) {
         event.stopPropagation();
         event.preventDefault();
 
+
+
         try{
-            var currentDropDownButton = event.target;
-            var currentDropDownMenu =
-                currentDropDownButton.parentNode.querySelector('.dropdown-menu');
+            var currentDropDownButton = e.target;
+            var currentDropDownMenu = currentDropDownButton.parentNode.querySelector('.dropdown-menu');
             var isOpen = currentDropDownMenu.classList.contains('show');
-            var dropDownMenus =
-                document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
+            var dropDownMenus = document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
+
             for (var j = 0; j < dropDownMenus.length; j++) {
                 dropDownMenus[j].classList.remove('show');
             }
@@ -34,6 +35,9 @@ $(document).keydown(function(e) {
             if (!isOpen) {
                 currentDropDownMenu.classList.add('show');
             }
+
+
+
             console.log('Space Key Pressed');
             return false;
         }catch (e) {
@@ -41,7 +45,7 @@ $(document).keydown(function(e) {
         }
     }
 });
-
+$('.navbar').get(0).focus();
 $(document).keyup(function(e){
     if(e.keyCode == 27){
         if($('a.dropdown-item').is(":focus") == true){
@@ -49,7 +53,8 @@ $(document).keyup(function(e){
             event.preventDefault();
             if($("ul.dropdown-menu").hasClass('show')){
                 $("ul.dropdown-menu").removeClass('show');
-                $("ul.dropdown-menu").closest('li.dropdown').filter(function(index){return index === 0;}).focus();
+                // $("ul.dropdown-menu").parent('li.dropdown').css('box-shadow','0 0 10px #719ECE');
+                $(event.target).closest('li.nav-item').addClass('tempBorder');
 
             }
         }
@@ -60,6 +65,7 @@ $(document).keyup(function(e){
     if(e.keyCode == 9 ){
         if($('a.nav-link').is(":focus") == true){
             $("ul.dropdown-menu").removeClass('show');
+            $("li.dropdown").removeClass('tempBorder');
         }
         console.log('tab key pressed.');
     }

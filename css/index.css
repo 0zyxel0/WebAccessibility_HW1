@@ -10,3 +10,9 @@
 .studies li {
     margin-top: 1.2rem
 }
+
+
+.nav-item:focus {
+                    border:1px solid white;
+    box-shadow: 0 0 10px #719ECE;
+}
