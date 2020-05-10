@@ -35,9 +35,10 @@ $(document).keydown(function(e) {
             if (!isOpen) {
                 currentDropDownMenu.classList.add('show');
             }
-
-
-
+            $(event.target).closest('a.nav-link').attr("aria-expanded","true");
+            if(('a.nav-link[aria-expanded="true"]')  === true){
+                alert('asdf');
+            }
             console.log('Space Key Pressed');
             return false;
         }catch (e) {
@@ -53,10 +54,10 @@ $(document).keyup(function(e){
             event.preventDefault();
             if($("ul.dropdown-menu").hasClass('show')){
                 $("ul.dropdown-menu").removeClass('show');
-                // $("ul.dropdown-menu").parent('li.dropdown').css('box-shadow','0 0 10px #719ECE');
                 $(event.target).closest('li.nav-item').addClass('tempBorder');
 
             }
+            $(event.target).closest('a.nav-link').attr("aria-expanded","false");
         }
     }
 });
