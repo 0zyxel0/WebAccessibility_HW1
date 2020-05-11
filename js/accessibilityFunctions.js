@@ -31,14 +31,13 @@ $(document).keydown(function(e) {
             for (var j = 0; j < dropDownMenus.length; j++) {
                 dropDownMenus[j].classList.remove('show');
             }
-
             if (!isOpen) {
                 currentDropDownMenu.classList.add('show');
             }
-            $(event.target).closest('a.nav-link').attr("aria-expanded","true");
-            if(('a.nav-link[aria-expanded="true"]')  === true){
-                alert('asdf');
-            }
+
+            $(e.target).closest('a.nav-link').attr('aria-expanded', function (i, attr) {
+                return attr == 'true' ? 'false' : 'true'
+            });
             console.log('Space Key Pressed');
             return false;
         }catch (e) {
@@ -58,6 +57,7 @@ $(document).keyup(function(e){
 
             }
             $(event.target).closest('a.nav-link').attr("aria-expanded","false");
+
         }
     }
 });
