@@ -120,6 +120,7 @@
     </div>
 
     <div class="container main" id="main">
+
         <div class="row no-gutters">
             <div class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
@@ -130,12 +131,13 @@
                         <div class="form-group">
                             <input class="form-control" id="login-email-control" type="email" placeholder="Email" required style="position: relative; top: 10px;">
                             <p style="position: relative; top: -60px;">Email</p>
-                            <small class="invalid-feedback"></small>
+                            <small class="invalid-feedback">Email cannot be empty.</small>
+
                         </div>
                         <div class="form-group">
                             <input class="form-control" id="login-password-control" type="password" placeholder="Password" style="position: relative; top: 10px;">
                             <p style="position: relative; top: -60px;">Password</p>
-                            <small class="invalid-feedback"></small>
+                            <small class="invalid-feedback">Password cannot be empty.</small>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -163,23 +165,23 @@
                                 <div class="form-group col-12 col-lg-6">
                                     <p>First name</p>
                                     <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required>
-                                    <small class="invalid-feedback"></small>
+                                    <small class="invalid-feedback">First name cannot be empty.</small>
                                 </div>
                                 <div class="form-group col-12 col-lg-6">
                                     <p>Last name</p>
                                     <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required>
-                                    <small class="invalid-feedback"></small>
+                                    <small class="invalid-feedback">Last name cannot be empty</small>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <p>Email</p>
                                 <input class="form-control" id="register-email-control" type="email" placeholder="Email" required>
-                                <small class="invalid-feedback"></small>
+                                <small class="invalid-feedback">Email cannot be empty.</small>
                             </div>
                             <div class="form-group">
                                 <p>Password</p>
                                 <input class="form-control" id="register-password-control" type="password" placeholder="Password" required>
-                                <small class="invalid-feedback"></small>
+                                <small class="invalid-feedback">Password cannot be empty.</small>
                                 <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                             </div>
                             <div class="form-group">
@@ -191,7 +193,7 @@
                                     <option value="continuing">Continuing education</option>
                                     <option value="doctorate">Doctorate</option>
                                 </select>
-                                <small class="invalid-feedback"></small>
+                                <small class="invalid-feedback">Please choose a program from the list.</small>
                             </div>
                         </div>
                         <div class="form-group">
