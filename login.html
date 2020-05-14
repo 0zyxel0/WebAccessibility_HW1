@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
-                   <img class="align-self-center mr-3 rounded-right logo" width="40" height="40" src="./img/logo.jpg" alt="Webiste Logo" aria-label="Logo of the Website" role="img">
+                   <img class="align-self-center mr-3 rounded-right logo" width="40" height="40" src="./img/logo.jpg" alt="Website Logo" aria-label="Logo of the Website" role="img">
                     <div class="media-body align-self-center">
                         <div class="mb-0 title">Lorem Ipsum
                             <br>Institute of Technology
@@ -35,6 +35,7 @@
         </div>
     </div>
 
+    <!--For mobile Layout-->
     <div class="container-fluid bg-dark nav">
         <div class="container">
             <nav class="navbar navbar-dark bg-dark navbar-expand-lg px-0" role="navigation" aria-label="Homepage Navigation">
@@ -45,11 +46,11 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <ul class="navbar-nav mr-auto"  role="menu">
-                        <li class="nav-item" aria-label="Go to Homepage">
+                    <ul class="navbar-nav mr-auto"  role=”menu”>
+                    <li class="nav-item" aria-label="Go to Homepage">
                             <a class="nav-link" href="./" tabindex="0">Homepage</a>
                         </li>
-                        <li class="nav-item dropdown" aria-label="Faculties List" aria-expanded="false">
+                        <li class="nav-item dropdown" aria-label="Faculties List" >
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" >Faculties</a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -69,7 +70,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown" aria-label="Education and Research" aria-expanded="false">
+                        <li class="nav-item dropdown" aria-haspopup="true" >
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -86,7 +87,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown" aria-label="Industry and partners" aria-expanded="false">
+                        <li class="nav-item dropdown" aria-pressed="false" aria-haspopup="true">
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -111,8 +112,8 @@
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
                     <div class="btn-group btn-group-sm">
-                       <!-- <button onclick="fn_increaseFont();" class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button onclick="fn_increaseFont();" class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button> -->
+                        <button onclick="fn_increaseFont();" class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
+                        <button onclick="fn_decreaseFont();" class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
                     </div>
                 </div>
             </div>
@@ -130,19 +131,20 @@
                     <form id="login-form" novalidate>
                         <div class="form-group">
                             <input class="form-control" id="login-email-control" type="email" placeholder="Email" required style="position: relative; top: 10px;">
-                            <p style="position: relative; top: -60px;">Email</p>
+                            <!--<label for="login-email-control">Email</label>-->
+							<label for="login-email-control" style="position: relative; top: -60px;">Email</label>
                             <small class="invalid-feedback">Email cannot be empty.</small>
 
                         </div>
                         <div class="form-group">
                             <input class="form-control" id="login-password-control" type="password" placeholder="Password" style="position: relative; top: 10px;">
-                            <p style="position: relative; top: -60px;">Password</p>
+                            <label for="login-password-control" style="position: relative; top: -60px;">Password</label>
                             <small class="invalid-feedback">Password cannot be empty.</small>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber-control">
-                                <label class="form-check-label">Keep me logged in</label>
+                                <label for="login-remmeber-control" class="form-check-label">Keep me logged in</label>
                             </div>
                         </div>
                         <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
@@ -157,35 +159,35 @@
                     <div class="text-danger mb-4 d-none subtitle" id="register-error">Please correct the error(s)</div>
                     <ul class="sr-only" id="register-error-list"></ul>
                     <form id="register-form" novalidate>
-                        <div class="form-group">
-                            <p class="form-label" id="register-basic-legend">Basic information
+                        <fieldset>
+                            <legend class="form-label" id="register-basic-legend">Basic information
                                 <small class="text-secondary">(optional)</small>
-                            </p>
+                            </legend>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-6">
-                                    <p>First name</p>
-                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required>
+                                    <label for="register-first-name-control"> First Name</label>
+                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required
                                     <small class="invalid-feedback">First name cannot be empty.</small>
                                 </div>
                                 <div class="form-group col-12 col-lg-6">
-                                    <p>Last name</p>
+                                    <label for="register-last-name-control"> Last Name</label>
                                     <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required>
                                     <small class="invalid-feedback">Last name cannot be empty</small>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <p>Email</p>
+                                <label for="register-email-control"> Email</label>
                                 <input class="form-control" id="register-email-control" type="email" placeholder="Email" required>
                                 <small class="invalid-feedback">Email cannot be empty.</small>
                             </div>
                             <div class="form-group">
-                                <p>Password</p>
+                                <label for="register-password-control"> Password</label>
                                 <input class="form-control" id="register-password-control" type="password" placeholder="Password" required>
                                 <small class="invalid-feedback">Password cannot be empty.</small>
                                 <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                             </div>
                             <div class="form-group">
-                                <p>Programme</p>
+                                <label for="register-programme-control"> Programme</label>
                                 <select class="form-control" id="register-programme-control" required>
                                     <option value="">Please select your education or research programme</option>
                                     <option value="bachelor">Bachelor</option>
@@ -195,30 +197,30 @@
                                 </select>
                                 <small class="invalid-feedback">Please choose a program from the list.</small>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <p class="form-label" id="register-address-legend">Additional information
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <legend class="form-label" id="register-address-legend">Additional information
                                 <small class="text-secondary">(optional)</small>
-                            </p>
+                            </legend>
                             <div class="form-group">
-                                <p>Street</p>
+                                  <label for="register-street-control"> Street</label>
                                 <input class="form-control" id="register-street-control" type="text" placeholder="Street">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-5">
-                                    <p>City</p>
+                                    <label for="register-city-control"> City</label>
                                     <input class="form-control" id="register-city-control" type="text" placeholder="City">
                                 </div>
                                 <div class="form-group col-12 col-lg-4">
-                                    <p>State</p>
+                                   <label for="register-state-control"> State</label>
                                     <input class="form-control" id="register-state-control" type="text" placeholder="State">
                                 </div>
                                 <div class="form-group col-12 col-lg-3">
-                                    <p>Zip</p>
+                                     <label for="register-zip-control"> Zip</label>
                                     <input class="form-control" id="register-zip-control" type="text" placeholder="Zip">
                                 </div>
                             </div>
-                        </div>
+                        </fieldset>
                         <button class="btn btn-primary" id="register-register-button">Register</button>
                     </form>
                 </div>
