@@ -4070,8 +4070,11 @@ tbody.collapse.show {
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: hsla(0, 0%, 100%, .75);
-    border: black solid 1px;
+    /*color: hsla(0, 0%, 100%, .75);*/
+    /*border: black solid 1px;*/
+    border: white solid 2px;
+    color: black;
+    background-color: white;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {

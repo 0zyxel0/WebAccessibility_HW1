@@ -13,7 +13,8 @@
 </head>
 
 <body class="d-flex flex-column bg-light">
-<a class="skip-main" href="#main" tabindex="0">Skip to main content</a>
+<a class="skip-main" href="#main" tabindex="0" aria-label="Skip to Main Content">Skip to main content</a>
+<a class="skip-main" href="#footer" tabindex="0" aria-label="Skip to Footer">Skip to footer</a>
     <header class="container-fluid d-none d-lg-block my-4 header" role="banner">
         <div class="container">
             <div class="row no-gutters">
@@ -50,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="nav-bar-content">
                     <ul class="navbar-nav mr-auto"  role="menu">
                     <li class="nav-item" aria-label="Go to Homepage">
-                            <a class="nav-link ctm-button-press" href="./" tabindex="0">Homepage</a>
+                            <a class="nav-link"  href="./" tabindex="0" >Homepage</a>
                         </li>
                         <li class="nav-item dropdown" aria-label="Faculties List" >
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties"  aria-expanded="false" aria-haspopup="true">Faculties</a>
@@ -226,7 +227,7 @@
         </div>
     </div>
 
-    <footer class="container-fluid bg-dark mt-4 footer" role="contentinfo">
+    <footer class="container-fluid bg-dark mt-4 footer" role="contentinfo" id="footer">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About" aria-label="About Us">About</a>
