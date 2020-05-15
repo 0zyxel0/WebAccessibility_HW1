@@ -15,7 +15,7 @@
 <body class="d-flex flex-column bg-light">
 <a class="skip-main" href="#main" tabindex="0" aria-label="Skip to Main Content">Skip to main content</a>
 <a class="skip-main" href="#footer" tabindex="0" aria-label="Skip to Footer">Skip to footer</a>
-    <header class="container-fluid d-none d-lg-block my-4 header" tabindex="-1" role="banner">
+<header class="container-fluid d-none d-lg-block my-4 header" tabindex="-1" role="banner">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
@@ -49,7 +49,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <ul class="navbar-nav mr-auto"  role="menu">
+                    <ul class="navbar-nav mr-auto"  role="navigation">
                     <li class="nav-item" aria-label="Go to Homepage">
                             <a class="nav-link"  href="./" tabindex="0" >Homepage</a>
                         </li>
@@ -115,8 +115,8 @@
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
                     <div class="btn-group btn-group-sm">
-                        <button onclick="fn_increaseFont();" class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button onclick="fn_decreaseFont();" class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
+                        <button onclick="fn_increaseFont();" class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase Font Size" role="button" >A+</button>
+                        <button onclick="fn_decreaseFont();" class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease Font Size" role="button">A-</button>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
             <section class="col-12 col-lg-6">
                 <article class="p-4 mt-4 bg-white studies">
                     <h1 >Studies</h1>
-                    <h2 class="text-info mt-0 mb-2 subtitle">Advance your scientific education</h2>
+                    <h2 class="mt-0 mb-2 subtitle">Advance your scientific education</h2>
                     <ol class="list-unstyled ml-3">
                         <li>
                             <a href="./empty.html?title=Bachelor">Bachelor programmes</a>
@@ -197,7 +197,7 @@
 
                 <article class="p-4 mt-4 bg-white researches">
                     <h1>Researches</h1>
-                    <h2 class="text-info mt-0 mb-2 subtitle">Join our renowned research groups</h2>
+                    <h2 class="mt-0 mb-2 subtitle">Join our renowned research groups</h2>
                     <ul class="list-unstyled ml-3">
                         <li><a href="./empty.html?title=Doctorate">Doctoral programmes</a></li>
                     </ul>

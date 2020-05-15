@@ -3087,9 +3087,9 @@ tbody.collapse.show {
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    color: #16181b;
-    text-decoration: none;
-    background-color: #f8f9fa
+    color: white;
+    text-decoration: underline;
+    background-color: #4b6660;
 }
 
 .dropdown-item.active,
@@ -4072,6 +4072,7 @@ tbody.collapse.show {
 .navbar-dark .navbar-nav .nav-link:hover {
     /*color: hsla(0, 0%, 100%, .75);*/
     /*border: black solid 1px;*/
+    text-decoration: underline;
     border: white solid 2px;
     color: black;
     background-color: white;

@@ -47,7 +47,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <ul class="navbar-nav mr-auto"  role="menu">
+                    <ul class="navbar-nav mr-auto"  role="navigation">
                         <li class="nav-item" aria-label="Go to Homepage">
                             <a class="nav-link" href="./" tabindex="0">Homepage</a>
                         </li>
@@ -113,8 +113,8 @@
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
                     <div class="btn-group btn-group-sm">
-                       <!-- <button onclick="fn_increaseFont();" class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button onclick="fn_increaseFont();" class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button> -->
+                        <button onclick="fn_increaseFont();" class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase Font Size" role="button" >A+</button>
+                        <button onclick="fn_decreaseFont();" class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease Font Size" role="button">A-</button>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@
         <div class="row no-gutters">
             <div class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
-                    <div class="text-primary mb-4 title">Login</div>
+                    <h1 class="text-primary mb-4 title">Login</h1>
                     <div class="text-danger mb-4 d-none subtitle" id="login-error"><b>Please correct the error(s)</b></div>
                     <ul class="sr-only" id="login-error-list"></ul>
                     <form id="login-form" novalidate="">
@@ -144,7 +144,7 @@
                         <div role="form" class="form-group">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber-control">
-                                <label class="form-check-label">Keep me logged in</label>
+                                <label class="form-check-label" for="login-remmeber-control">Keep me logged in</label>
                             </div>
                         </div>
                         <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
@@ -155,7 +155,7 @@
 
             <div class="col-12 col-md-7 mt-4 register">
                 <div class="p-4 bg-white">
-                    <div class="text-primary mb-4 title">Create new account</div>
+                    <h1 class="text-primary mb-4 title">Create new account</h1>
                     <div class="text-danger mb-4 d-none subtitle" id="register-error"><b>Please correct the error(s)</b></div>
                     <ul class="sr-only" id="register-error-list"></ul>
                     <form id="register-form" novalidate>
@@ -187,7 +187,7 @@
                                 <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                             </div>
                             <div class="form-group">
-                                <label for="register-programme-control"></label>
+                                <label for="register-programme-control">Research Programme</label>
                                 <select class="form-control" id="register-programme-control" required>
                                     <option value="">Please select your education or research programme</option>
                                     <option value="bachelor">Bachelor</option>
@@ -208,7 +208,7 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-5">
-                                    <label for="register-city-control"></label>
+                                    <label for="register-city-control">City</label>
                                     <input class="form-control" id="register-city-control" type="text" placeholder="City">
                                 </div>
                                 <div class="form-group col-12 col-lg-4">
@@ -216,7 +216,7 @@
                                     <input class="form-control" id="register-state-control" type="text" placeholder="State">
                                 </div>
                                 <div class="form-group col-12 col-lg-3">
-                                    <label for="register-zip-control"></label>
+                                    <label for="register-zip-control">Zip</label>
                                     <input class="form-control" id="register-zip-control" type="text" placeholder="Zip">
                                 </div>
                             </div>

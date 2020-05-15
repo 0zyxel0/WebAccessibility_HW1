@@ -30,36 +30,35 @@ $(document).keydown(function(e) {
         e.stopPropagation();
         e.preventDefault();
         try{
-            if($('#nav-bar-content .dropdown-toggle').is(":focus") == true)
-            {
-                var currentDropDownButton = e.target;
-                var currentDropDownMenu = currentDropDownButton.parentNode.querySelector('.dropdown-menu');
-                var isOpen = currentDropDownMenu.classList.contains('show');
-                var dropDownMenus = document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
-
-                for (var j = 0; j < dropDownMenus.length; j++) {
-                    dropDownMenus[j].classList.remove('show');
-                }
-                if (!isOpen) {
-                    currentDropDownMenu.classList.add('show');
-                }
-
-                $(e.target).closest('a.nav-link').attr('aria-expanded', function (i, attr) {
-                    return attr == 'true' ? 'false' : 'true'
-                });
-
-                return false;
-            }
-            console.log('Space Key Pressed');
+            var checkLink = $(e.target);
+             if($(checkLink).is('a') == true){
+                 if($('#nav-bar-content .dropdown-toggle').is(":focus") == true)
+                 {
+                     var currentDropDownButton = e.target;
+                     var currentDropDownMenu = currentDropDownButton.parentNode.querySelector('.dropdown-menu');
+                     var isOpen = currentDropDownMenu.classList.contains('show');
+                     var dropDownMenus = document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
+                     for (var j = 0; j < dropDownMenus.length; j++) {
+                         dropDownMenus[j].classList.remove('show');
+                     }
+                     if (!isOpen) {
+                         currentDropDownMenu.classList.add('show');
+                     }
+                     $(e.target).closest('a.nav-link').attr('aria-expanded', function (i, attr) {
+                         return attr == 'true' ? 'false' : 'true'
+                     });
+                     return false;
+                 }
+                 else {
+                     location.href = checkLink.attr('href');
+                 }
+             }
+             console.log('Space Key Pressed');
         }catch (e) {
             return e;
         }
     }
 });
-
-
-
-
 
 $(document).keyup(function(e){
     if(e.keyCode == 27){
