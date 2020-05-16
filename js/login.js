@@ -160,6 +160,7 @@ function register(event) {
 
     if (hasError) {
         document.getElementById('register-error').classList.remove('d-none');
+        $("input.invalid-feedback:first").focus();
     } else {
         document.getElementById('register-error').classList.add('d-none');
     }

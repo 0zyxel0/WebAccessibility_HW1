@@ -1,3 +1,7 @@
+//Global Variables
+
+let formValid;
+
 //Function to Increase the Font Size of the Texts in the Page.
 function fn_increaseFont(){
     var fontSize = $("html").css("fontSize");
@@ -16,7 +20,7 @@ function fn_decreaseFont(){
     $("html").css("fontSize", fontSize );
 }
 
-//Keydown Global Functions
+//Keydown Global Functions for spacebar
 $(document).keydown(function(e) {
     if (e.keyCode == 32) {
         e.stopPropagation();
@@ -40,6 +44,7 @@ $(document).keydown(function(e) {
     }
 });
 
+// This key function contains keypress for esc keys and tab keys
 $(document).keyup(function(e){
     if(e.keyCode == 27){
         if($('a.dropdown-item').is(":focus") == true){
@@ -63,6 +68,7 @@ $(document).keyup(function(e){
     }
 });
 
+// This function is called by the anchor tags to change the aria expanded and open the submenu.
 function toggle(id, id2) {
     if (document.getElementById(id).classList.contains('show') === false)
     {
@@ -73,3 +79,35 @@ function toggle(id, id2) {
         document.getElementById(id2).setAttribute('aria-expanded', 'false');
     }
 }
+
+
+function validateFormsErrorLogin(){
+    if($("#login-form input").hasClass('is-invalid')){
+        $("input.is-invalid:first").focus()
+    }else{
+        return false;
+    }
+
+}
+
+
+
+function validateFormsErrorRegistration(){
+    if($("#register-form input").hasClass('is-invalid')){
+        $("input.is-invalid:first").focus()
+    }else{
+        return false;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
