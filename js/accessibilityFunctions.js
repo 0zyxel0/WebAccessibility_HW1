@@ -83,7 +83,7 @@ function toggle(id, id2) {
 
 function validateFormsErrorLogin(){
     if($("#login-form input").hasClass('is-invalid')){
-        $("input.is-invalid:first").focus()
+        $("#login-form input.is-invalid:first").focus()
     }else{
         return false;
     }
@@ -94,7 +94,7 @@ function validateFormsErrorLogin(){
 
 function validateFormsErrorRegistration(){
     if($("#register-form input").hasClass('is-invalid')){
-        $("input.is-invalid:first").focus()
+        $("#register-form input.is-invalid:first").focus()
     }else{
         return false;
     }
