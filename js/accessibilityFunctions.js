@@ -1,9 +1,3 @@
-
-
-// $('.navbar').get(0).focus();
-
-
-
 //Function to Increase the Font Size of the Texts in the Page.
 function fn_increaseFont(){
     var fontSize = $("html").css("fontSize");
@@ -24,51 +18,22 @@ function fn_decreaseFont(){
 
 //Keydown Global Functions
 $(document).keydown(function(e) {
-
-
     if (e.keyCode == 32) {
         e.stopPropagation();
         e.preventDefault();
         try{
             var checkLink = $(e.target);
-             if($(checkLink).is('a') == true){
-                 var currentDropDownButton = e.target;
-                 var currentDropDownMenu = currentDropDownButton.parentNode.querySelector('.dropdown-menu');
-
-
-
-
-                 if ($(e.target).attr( 'aria-expanded') === 'false') {
-                     $(e.target).attr('aria-expanded', 'true');
-                     currentDropDownMenu.classList.add('show');
-                 } else if($(e.target).attr( 'aria-expanded') === 'true') {
-                     $(e.target).attr( 'aria-expanded', 'false');
-                     currentDropDownMenu.classList.remove('show');
-                 }
-
-
-                 // if($('#nav-bar-content .dropdown-toggle').is(":focus") == true)
-                 // {
-                 //     var currentDropDownButton = e.target;
-                 //     var currentDropDownMenu = currentDropDownButton.parentNode.querySelector('.dropdown-menu');
-                 //     var isOpen = currentDropDownMenu.classList.contains('show');
-                 //     var dropDownMenus = document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
-                 //     for (var j = 0; j < dropDownMenus.length; j++) {
-                 //         dropDownMenus[j].classList.remove('show');
-                 //     }
-                 //     if (!isOpen) {
-                 //         currentDropDownMenu.classList.add('show');
-                 //     }
-                 //     $(e.target).closest('a.nav-link').attr('aria-expanded', function (i, attr) {
-                 //         return attr == 'true' ? 'false' : 'true'
-                 //     });
-                 //     return false;
-                 // }
-                 else {
-                     location.href = checkLink.attr('href');
-                 }
-             }
-             console.log('Space Key Pressed');
+            if($(checkLink).is('a') == true){
+                if($(checkLink).hasClass('nav-link dropdown-toggle')){
+                    document.getElementById(e.target.id).click();
+                }
+                else {
+                    location.href = checkLink.attr('href');
+                }
+            }else{
+                document.getElementById(e.target.id).click();
+            }
+            console.log('Space Key Pressed');
         }catch (e) {
             return e;
         }
@@ -81,10 +46,7 @@ $(document).keyup(function(e){
             e.stopPropagation();
             e.preventDefault();
             if($("ul.dropdown-menu").hasClass('show')){
-                $("ul.dropdown-menu").removeClass('show');
-                $(e.target).closest('li.nav-item').addClass('tempBorder');
             }
-            $(e.target).closest('a.nav-link').attr("aria-expanded","false");
         }
         else {
             $("ul.dropdown-menu").removeClass('show');
@@ -101,10 +63,13 @@ $(document).keyup(function(e){
     }
 });
 
-
-
-function custom_space_click(){
-    var hrefLink = $(this).attr('href');
-    console.log(hrefLink);
-
+function toggle(id, id2) {
+    if (document.getElementById(id).classList.contains('show') === false)
+    {
+        document.getElementById(id2).setAttribute('aria-expanded', 'true');
+    }
+    if (document.getElementById(id).classList.contains('show') === true)
+    {
+        document.getElementById(id2).setAttribute('aria-expanded', 'false');
+    }
 }
