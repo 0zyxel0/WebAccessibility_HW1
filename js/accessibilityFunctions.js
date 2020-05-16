@@ -32,23 +32,38 @@ $(document).keydown(function(e) {
         try{
             var checkLink = $(e.target);
              if($(checkLink).is('a') == true){
-                 if($('#nav-bar-content .dropdown-toggle').is(":focus") == true)
-                 {
-                     var currentDropDownButton = e.target;
-                     var currentDropDownMenu = currentDropDownButton.parentNode.querySelector('.dropdown-menu');
-                     var isOpen = currentDropDownMenu.classList.contains('show');
-                     var dropDownMenus = document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
-                     for (var j = 0; j < dropDownMenus.length; j++) {
-                         dropDownMenus[j].classList.remove('show');
-                     }
-                     if (!isOpen) {
-                         currentDropDownMenu.classList.add('show');
-                     }
-                     $(e.target).closest('a.nav-link').attr('aria-expanded', function (i, attr) {
-                         return attr == 'true' ? 'false' : 'true'
-                     });
-                     return false;
+                 var currentDropDownButton = e.target;
+                 var currentDropDownMenu = currentDropDownButton.parentNode.querySelector('.dropdown-menu');
+
+
+
+
+                 if ($(e.target).attr( 'aria-expanded') === 'false') {
+                     $(e.target).attr('aria-expanded', 'true');
+                     currentDropDownMenu.classList.add('show');
+                 } else if($(e.target).attr( 'aria-expanded') === 'true') {
+                     $(e.target).attr( 'aria-expanded', 'false');
+                     currentDropDownMenu.classList.remove('show');
                  }
+
+
+                 // if($('#nav-bar-content .dropdown-toggle').is(":focus") == true)
+                 // {
+                 //     var currentDropDownButton = e.target;
+                 //     var currentDropDownMenu = currentDropDownButton.parentNode.querySelector('.dropdown-menu');
+                 //     var isOpen = currentDropDownMenu.classList.contains('show');
+                 //     var dropDownMenus = document.querySelectorAll('#nav-bar-content .dropdown .dropdown-menu');
+                 //     for (var j = 0; j < dropDownMenus.length; j++) {
+                 //         dropDownMenus[j].classList.remove('show');
+                 //     }
+                 //     if (!isOpen) {
+                 //         currentDropDownMenu.classList.add('show');
+                 //     }
+                 //     $(e.target).closest('a.nav-link').attr('aria-expanded', function (i, attr) {
+                 //         return attr == 'true' ? 'false' : 'true'
+                 //     });
+                 //     return false;
+                 // }
                  else {
                      location.href = checkLink.attr('href');
                  }
