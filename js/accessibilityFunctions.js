@@ -38,28 +38,29 @@ $(document).keydown(function(e) {
                 document.getElementById(e.target.id).click();
             }
             console.log('Space Key Pressed');
-        }catch (e) {
-            return e;
+        }catch (err) {
+            return err;
         }
     }
 });
 
 // This key function contains keypress for esc keys and tab keys
 $(document).keyup(function(e){
-//Escape key pressed. This function Closes all dropdown menu and closes all aria-expanded attributes to false
+//Escape key pressed. This function Closes all dropdown menu and closes all aria-expanded attributes to false and goes back to Homapage link
     if(e.keyCode === 27){
+        e.stopPropagation();
+        e.preventDefault();
         if($('a.dropdown-item').is(":focus") === true){
             e.stopPropagation();
             e.preventDefault();
             if($("ul.dropdown-menu").hasClass('show')){
                 $('a.dropdown-toggle').attr('aria-expanded','false');
                 $("ul.dropdown-menu").removeClass('show');
-                // $('e.target').focus();
+                 $('a.nav-link:first').focus();
             }
         }
         else {
             $(e.target).attr('aria-expanded','true');
-            // $("ul.dropdown-menu").removeClass('show');
         }
     }
 
