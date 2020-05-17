@@ -46,20 +46,25 @@ $(document).keydown(function(e) {
 
 // This key function contains keypress for esc keys and tab keys
 $(document).keyup(function(e){
-    if(e.keyCode == 27){
-        if($('a.dropdown-item').is(":focus") == true){
+//Escape key pressed. This function Closes all dropdown menu and closes all aria-expanded attributes to false
+    if(e.keyCode === 27){
+        if($('a.dropdown-item').is(":focus") === true){
             e.stopPropagation();
             e.preventDefault();
             if($("ul.dropdown-menu").hasClass('show')){
+                $('a.dropdown-toggle').attr('aria-expanded','false');
+                $("ul.dropdown-menu").removeClass('show');
+                // $('e.target').focus();
             }
         }
         else {
-            $("ul.dropdown-menu").removeClass('show');
+            $(e.target).attr('aria-expanded','true');
+            // $("ul.dropdown-menu").removeClass('show');
         }
     }
 
 
-    else if(e.keyCode == 9 ){
+    else if(e.keyCode === 9 ){
         if($('a.nav-link').is(":focus") == true){
             $("ul.dropdown-menu").removeClass('show');
             $("li.dropdown").removeClass('tempBorder');
@@ -80,18 +85,17 @@ function toggle(id, id2) {
     }
 }
 
-
+//This function is called by the login button to validate the form. if the form has errors it will trigger a focus to the object.
 function validateFormsErrorLogin(){
     if($("#login-form input").hasClass('is-invalid')){
         $("#login-form input.is-invalid:first").focus()
     }else{
         return false;
     }
-
 }
 
 
-
+//This function is called by the registration button to validate the form. if the form has errors it will trigger a focus to the object.
 function validateFormsErrorRegistration(){
     if($("#register-form input").hasClass('is-invalid')){
         $("#register-form input.is-invalid:first").focus()

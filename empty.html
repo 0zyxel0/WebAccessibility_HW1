@@ -29,8 +29,8 @@
                 <div class="col-4">
                     <div class="btn-toolbar justify-content-end">
                         <div class="btn-group btn-group-sm">
-                            <button onclick="fn_increaseFont();" class="btn btn-dark font-increase-button" id="font-increase-button" >A+</button>
-                            <button onclick="fn_decreaseFont();" class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
+                            <button onclick="fn_increaseFont();" class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase Fontsize">A+</button>
+                            <button onclick="fn_decreaseFont();" class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease Fontsize">A-</button>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
 
     <div class="container-fluid bg-dark nav">
         <div class="container">
-            <nav class="navbar navbar-dark bg-dark navbar-expand-lg px-0" role="navigation" aria-label="Homepage Navigation">
+            <nav class="navbar navbar-dark bg-dark navbar-expand-lg px-0" >
                 <div class="navbar-brand d-lg-none">
                     <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Lorem Ipsum Website Logo" aria-label="Lorem Ipsum Website Logo">
                 </div>
@@ -48,27 +48,27 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <ul class="navbar-nav mr-auto"  role="navigation">
-                        <li class="nav-item" aria-label="Go to Homepage">
+                    <ul class="navbar-nav mr-auto"  role="menu">
+                        <li class="nav-item" aria-label="Go to Homepage" role="link">
                             <a class="nav-link"  href="./" tabindex="0" >Homepage</a>
                         </li>
                         <li class="nav-item dropdown" aria-label="Faculties List" >
                             <a aria-expanded="false" onclick="toggle('menu_1', 'nav-bar-faculties')" class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a>
                             <ul class="dropdown-menu" id="menu_1">
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences" role="link">Applied sciences</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning" role="link">Architecture &amp; planning</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment" role="link">Construction &amp; environment</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Engineering" role="link">Engineering</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences" role="link">Health &amp; social sciences</a>
                                 </li>
                             </ul>
                         </li>
@@ -76,16 +76,16 @@
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" aria-expanded="false" onclick="toggle('menu_2', 'nav-bar-education')">Education &amp; research</a>
                             <ul class="dropdown-menu" id="menu_2">
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Bachelor" role="link">Bachelor</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Master" role="link">Master</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Continuing+education" role="link">Continuing education</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Doctorate" role="link">Doctorate</a>
                                 </li>
                             </ul>
                         </li>
@@ -93,13 +93,13 @@
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" aria-expanded="false" onclick="toggle('menu_3', 'nav-bar-industry')">Industry &amp; partners</a>
                             <ul class="dropdown-menu" id="menu_3">
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Public+relations" role="link">Public relations</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Commercialization" role="link">Commercialization</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
+                                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners" role="link">Sponsors &amp; partners</a>
                                 </li>
                             </ul>
                         </li>
